@@ -12,7 +12,7 @@
     "expected_status": 401
   },
   {
-    "id": 3,
+    "id": 2,
     "feature": "BOLA/IDOR",
     "case_name": "Xem thông tin người dùng trái phép (Thay đổi ID)",
     "method": "GET",
@@ -24,7 +24,7 @@
     "expected_status": 403
   },
   {
-    "id": 5,
+    "id": 3,
     "feature": "Broken Authentication",
     "case_name": "Brute Force / Password Spray vào Login",
     "method": "POST",
