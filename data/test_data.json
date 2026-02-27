@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 11,
     "feature": "SQL Injection",
     "case_name": "Bypass Login bằng SQLi (Logic luôn đúng)",
     "method": "POST",
@@ -12,7 +12,7 @@
     "expected_status": 401
   },
   {
-    "id": 2,
+    "id": 12,
     "feature": "BOLA/IDOR",
     "case_name": "Xem thông tin người dùng trái phép (Thay đổi ID)",
     "method": "GET",
@@ -24,7 +24,7 @@
     "expected_status": 403
   },
   {
-    "id": 3,
+    "id": 13,
     "feature": "Broken Authentication",
     "case_name": "Brute Force / Password Spray vào Login",
     "method": "POST",
