@@ -180,7 +180,7 @@ class MyTester(APIClient):
     #Ví dụ: 101?user_id=104 -> Lúc đầu đọc thấy id 101 ok chuẩn với token xong thấy id 104 ok truy vấn data của id 104 --> bola thành công 
     def BOLA_hpp(self):
         data_test = self.doc_file_json("data/test_data.json")
-        
+        lo_hong = False
         for part in data_test:
             if part["id"] != 13:
                 continue
@@ -220,17 +220,20 @@ class MyTester(APIClient):
                                 if str(target_id) in shoot.text and str(my_id) not in shoot.text:
                                     print("Success! System has bola threat by hpp method")
                                     print(shoot.text)
+                                    lo_hong = True
                                 else:
                                     print("Failed! Can't access the target_id ")
                             else:
                                 print("Failed! System is against bola with hpp method")
                         except Exception as e:
                             print(f"Loi roi {e}")
+        return lo_hong
 
 
 
     def BOLA_classic(self):
         data_test = self.doc_file_json("data/test_data.json")
+        lo_hong = False
         for part in data_test:
             if part["id"] != 13:
                 continue
@@ -263,28 +266,32 @@ class MyTester(APIClient):
                                 if str(target_id) in shoot.text and str(my_id) not in shoot.text:
                                     print("Success! System has Bola with classic way")
                                     print(shoot.text)
+                                    lo_hong = True
                                 else:
                                     print("Failed! System is immune to bola with classic way")
                             else:
                                 print("Failed! System is immune to bola with classic way")
                         except Exception as e:
                             print(f"Co loi {e}")
+        return lo_hong
 
 
 
+def test_bola_hpp():
+    print("Testing kịch bản Bola hpp")
+    tool = MyTester(url)
+    res = tool.BOLA_hpp()
 
-            
+    assert res,"API không có lỗ hổng Bola HPP"
+
+def test_bola_classic():
+    print("Testing kịch bản bola classic")
+    tool = MyTester(url)
+    res = tool.BOLA_classic()
+
+    assert res,"API không có lỗ hổng BOLA"
+    
     
 
 
-if __name__ == "__main__":
-    # Những code nằm trong này CHỈ CHẠY khi bạn bấm nút "Run" trực tiếp file này.
-    # Khi Lead Hiếu import file này sang file khác, đoạn code này sẽ NGỦ YÊN.
-    
-    url_test = "http://127.0.0.1:8000"
-    print(f"[*] Đang khởi chạy test nội bộ trên {url_test}...")
-    
-    tool = MyTester(url_test)
-    
-    print("\n--- TEST BOLA CLASSIC ---")
-    tool.BOLA_classic()
+
