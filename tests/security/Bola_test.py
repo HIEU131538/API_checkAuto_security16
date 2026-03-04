@@ -9,6 +9,8 @@ login_admin = {
     "username":"admin",
     "password":"password"
 }
+
+#Yeu cau tao user truoc, vi sqllite chay tren ram nen la moi lan tat server se mat het du lieu
 login_user_1 = {
     "username":"duynt",
     "password":"duynt"
