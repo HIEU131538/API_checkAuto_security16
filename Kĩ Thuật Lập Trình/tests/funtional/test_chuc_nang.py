@@ -8,9 +8,7 @@ class FunctionalTester(APIClient):
         # Không cần self.results nữa vì Pytest và Allure sẽ lo việc báo cáo
 
     def execute_single_case(self, case):
-        """
-        Công nhân chuyên cần: Chỉ nhận đúng 1 case từ Pytest và thực thi nó.
-        """
+    
         cid = case.get('id')
         method = case.get('method')
         endpoint = case.get('endpoint')
