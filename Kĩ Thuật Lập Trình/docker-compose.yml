@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  security-tool:
+    build: .
+    container_name: security-tool-container
+    stdin_open: true # Tương đương với -i
+    tty: true        # Tương đương với -t
+    volumes:
+      - ./allure-results:/app/allure-results
+      - ./allure-report:/app/allure-report
+      - .:/app

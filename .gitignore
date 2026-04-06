@@ -1,0 +1,15 @@
+# Chặn các file ảnh Docker nặng ở bất kỳ đâu trong dự án
+**/*.tar
+**/*.tar.gz
+
+# Chặn các file rác phát sinh từ Python
+**/__pycache__/
+**/*.pyc
+
+# Chặn báo cáo Allure ở cả folder tool và folder api
+**/allure-results/
+**/allure-report/
+**/.pytest_cache/
+
+# Chặn các file cấu hình cá nhân hoặc môi trường
+.env
