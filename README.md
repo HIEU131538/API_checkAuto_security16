@@ -7,8 +7,7 @@ Hệ thống được đóng gói hoàn toàn bằng Docker , giúp triển khai
 Dự án bao gồm 2 thành phần chính hoạt động trong các Container biệt lập:
 
 1.  **Target API**: Một hệ thống FastAPI mô phỏng các nghiệp vụ thực tế (Quản lý User, Login, Data commit).
-2.  
-3.  **Security Tool**: Công cụ quét được viết bằng Python, sử dụng Pytest và Allure để thực hiện tấn công và xuất báo cáo (Module chức năng, Module bảo mật, Module báo cáo)
+2.  **Security Tool**: Công cụ quét được viết bằng Python, sử dụng Pytest và Allure để thực hiện tấn công và xuất báo cáo (Module chức năng, Module bảo mật, Module báo cáo)
 
 ---
 ## Hướng dẫn triển khai
